@@ -1,0 +1,32 @@
+<div class="input-group mt-3">
+
+  <input type="number" [(ngModel)]="job_number" aria-label="Job Number" class="form-control" placeholder="Job Number">
+
+  <input type="number" [(ngModel)]="po_number" aria-label="PO Number" class="form-control" placeholder="PO Number">
+
+  <input type="number" [(ngModel)]="stock_code" aria-label="Stock Number" class="form-control" placeholder="Stock Number">
+
+  <input type="number" [(ngModel)]="width" aria-label="Width" class="form-control" placeholder="Width">
+
+  <input type="number" [(ngModel)]="footage" aria-label="Footage" class="form-control" placeholder="Footage">
+
+  <select class="form-select" [(ngModel)]="press" id="press">
+    <option value="" selected>Press</option>
+    <option value="2202">2202</option>
+    <option value="2204">2204</option>
+    <option value="2210">2210</option>
+    <option value="p6">P6</option>
+    <option value="p7">P7</option>
+    <option value="indigo">Indigo</option>
+    <option value="screen">Screen</option>
+  </select>
+
+  <select class="form-select" [(ngModel)]="status" id="status">
+    <option value="" selected>Status</option>
+    <option value="Ordered">Ordered</option>
+    <option value="Received">Received</option>
+  </select>
+
+  <button class="btn btn-outline-secondary" (click)="clear()" value="clear" type="button">Clear</button>
+
+</div>
