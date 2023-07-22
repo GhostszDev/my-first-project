@@ -1,0 +1,8 @@
+.ghs_clickable{
+  color: red;
+
+  &:hover{
+    cursor: pointer;
+    color: aqua;
+  }
+}

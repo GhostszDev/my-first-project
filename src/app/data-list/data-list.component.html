@@ -1,0 +1,40 @@
+<table class="table mt-5">
+  <thead>
+  <tr>
+    <th scope="col">Job Number</th>
+    <th scope="col">PO Number</th>
+    <th scope="col">Stock Number</th>
+    <th scope="col">Width</th>
+    <th scope="col">Footage</th>
+    <th scope="col">Press</th>
+    <th scope="col">Status</th>
+    <th scope="col">Options</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let d of data" class="edit_{{d.job}}">
+    <th scope="row" *ngIf="document.getElementsByClassName('edit_'+d.job)[0] && !document.getElementsByClassName('edit_'+d.job+' edit')[0]">
+      {{d.job}}
+    </th>
+
+    <th scope="row" *ngIf="document.getElementsByClassName('edit_'+d.job+' edit')[0]">
+      <input [value]="d.job">
+    </th>
+    <td>{{d.po}}</td>
+    <td>{{d.stock}}</td>
+    <td>{{d.width}}</td>
+    <td>{{d.footage}}</td>
+    <td>{{d.press}}</td>
+    <td>{{d.status}}</td>
+    <td>
+      <span *ngIf="document.getElementsByClassName('edit_'+d.job)[0] && !document.getElementsByClassName('edit_'+d.job+' edit')[0]">
+        <fa-icon class="ghs_clickable" (click)="editData(d)" [icon]="faPen"></fa-icon>
+      </span>
+
+      <span *ngIf="document.getElementsByClassName('edit_'+d.job+' edit')[0]">
+        <fa-icon class="ghs_clickable" (click)="saveData(d)" [icon]="faFloppyDisk"></fa-icon>
+      </span>
+    </td>
+  </tr>
+  </tbody>
+</table>

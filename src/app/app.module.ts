@@ -6,17 +6,21 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SearchFormComponent } from './search-form/search-form.component';
 import {FormsModule} from "@angular/forms";
+import { DataListComponent } from './data-list/data-list.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SearchFormComponent
+    SearchFormComponent,
+    DataListComponent
   ],
     imports: [
-        BrowserModule,
-        AppRoutingModule,
-        NgbModule,
-        FormsModule
+      BrowserModule,
+      AppRoutingModule,
+      NgbModule,
+      FormsModule,
+      FontAwesomeModule
     ],
   providers: [],
   bootstrap: [AppComponent]
