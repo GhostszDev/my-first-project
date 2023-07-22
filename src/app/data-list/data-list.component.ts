@@ -14,7 +14,7 @@ export class DataListComponent implements OnInit{
   faFloppyDisk = faFloppyDisk;
 
   ngOnInit(): void {
-    fetch('/assets/data.json').then(res => res.json())
+    fetch('assets/data.json').then(res => res.json())
       .then(jsonData => {
         this.data = jsonData;
       });
